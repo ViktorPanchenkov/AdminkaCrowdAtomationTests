@@ -27,14 +27,17 @@ public class CategoriesPagePositiveScenarios {
         wait = new WebDriverWait(webDriver,4);
         dashboardPage = new DashboardPage(webDriver);
         categoriesPage = new CategoriesPage(webDriver);
+        webDriver.manage().window().maximize();
 
 
         String Phone = "+1111111111";
         String Password = "qwerty";
         loginPage.TypePhone(Phone);
+
         loginPage.TypePassword(Password);
         loginPage.ClickOnTheLoginButton();
         dashboardPage.GotoCategoriesTab();
+
 
     }
 

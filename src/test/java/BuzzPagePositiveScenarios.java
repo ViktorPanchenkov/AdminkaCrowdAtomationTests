@@ -29,12 +29,14 @@ public class BuzzPagePositiveScenarios {
         wait = new WebDriverWait(webDriver, 8);
         dashboardPage = new DashboardPage(webDriver);
         buzzPage = new BuzzPage(webDriver);
+        webDriver.manage().window().maximize();
         String Phone = "+1111111111";
         String Password = "qwerty";
         loginPage.TypePhone(Phone);
         loginPage.TypePassword(Password);
         loginPage.ClickOnTheLoginButton();
         dashboardPage.GotoTheBuzzTab();
+
     }
 
     @Test

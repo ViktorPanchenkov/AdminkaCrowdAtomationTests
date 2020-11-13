@@ -26,6 +26,7 @@ public class CommunityPagePositiveScenarios {
         wait = new WebDriverWait(webDriver,4);
         dashboardPage = new DashboardPage(webDriver);
         communityPage = new CommunityPage(webDriver);
+        webDriver.manage().window().maximize();
 
         String Phone = "+1111111111";
         String Password = "qwerty";
@@ -33,6 +34,7 @@ public class CommunityPagePositiveScenarios {
         loginPage.TypePassword(Password);
         loginPage.ClickOnTheLoginButton();
         dashboardPage.GotoCommunitiesTab();
+
 
     }
 

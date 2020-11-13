@@ -25,6 +25,7 @@ public class SurveyPageNegativeScenarios {
         wait = new WebDriverWait(webDriver, 6);
         dashboardPage = new DashboardPage(webDriver);
         surveysPage = new SurveysPage(webDriver);
+        webDriver.manage().window().maximize();
         String Phone = "+1111111111";
         String Password = "qwerty";
         loginPage.TypePhone(Phone);

@@ -24,6 +24,7 @@ public class ContactRequestsPositiveScenarios {
         wait = new WebDriverWait(webDriver,4);
         dashboardPage = new DashboardPage(webDriver);
         contactRequestsPage = new ContactRequestsPage(webDriver);
+        webDriver.manage().window().maximize();
 
         String Phone = "+1111111111";
         String Password = "qwerty";
@@ -31,6 +32,7 @@ public class ContactRequestsPositiveScenarios {
         loginPage.TypePassword(Password);
         loginPage.ClickOnTheLoginButton();
         dashboardPage.GotoContactRequestsTab();
+
     }
 
     @Test

@@ -1,3 +1,4 @@
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -30,6 +31,7 @@ public class LoginPagePositiveScenarios {
        // baseUrl = "http://192.168.88.89";
       //  browser = "Chrome";
         wait = new WebDriverWait(webDriver,4);
+        webDriver.manage().window().maximize();
 
 
 
@@ -83,6 +85,10 @@ public class LoginPagePositiveScenarios {
         } catch (org.openqa.selenium.TimeoutException Exp){
             Assert.fail("Probably Forgot PasswordPage is not opened!");
         }
+    }
+    @After
+    public void Close(){
+        webDriver.quit();
     }
 
 

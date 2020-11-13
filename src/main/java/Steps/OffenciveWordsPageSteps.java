@@ -7,7 +7,8 @@ public class OffenciveWordsPageSteps {
    OffenciveWordsPage offenciveWordsPage;
 
    @Step
-   public void EnterNewOffenciveWord(String Word){
+   public void EnterNewOffenciveWord(String Word)
+   {
       offenciveWordsPage.EnterNewOffencivewordInInput(Word);
    }
    @Step

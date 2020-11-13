@@ -35,6 +35,7 @@ public class PointsOagePositiveScenarios {
         loginPage.TypePassword(Password);
         loginPage.ClickOnTheLoginButton();
         dashboardPage.GotoPointsPage();
+        webDriver.manage().window().maximize();
 
     }
 

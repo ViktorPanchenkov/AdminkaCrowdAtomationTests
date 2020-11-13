@@ -25,6 +25,7 @@ public class StayInTouchEmailsPositiveScenarios {
         wait = new WebDriverWait(webDriver,4);
         dashboardPage = new DashboardPage(webDriver);
         stayInTouchEmailsPage = new StayInTouchEmailsPage(webDriver);
+        webDriver.manage().window().maximize();
 
         String Phone = "+1111111111";
         String Password = "qwerty";
@@ -32,6 +33,7 @@ public class StayInTouchEmailsPositiveScenarios {
         loginPage.TypePassword(Password);
         loginPage.ClickOnTheLoginButton();
         dashboardPage.GotoStayinTouchEmailsTab();
+
     }
     @Test
     public void DeleteUserFromSubscribedTab(){

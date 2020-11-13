@@ -27,6 +27,7 @@ public class UsersPagePositiveScenarios {
         wait = new WebDriverWait(webDriver,4);
         dashboardPage = new DashboardPage(webDriver);
         usersPage = new UsersPage(webDriver);
+        webDriver.manage().window().maximize();
 
         String Phone = "+1111111111";
         String Password = "qwerty";

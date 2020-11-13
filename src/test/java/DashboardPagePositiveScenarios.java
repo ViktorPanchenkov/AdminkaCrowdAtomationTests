@@ -1,3 +1,4 @@
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,11 +24,13 @@ public class DashboardPagePositiveScenarios {
         //  browser = "Chrome";
         wait = new WebDriverWait(webDriver, 4);
         dashboardPage = new DashboardPage(webDriver);
+        webDriver.manage().window().maximize();
         String Phone = "+1111111111";
         String Password = "qwerty";
         loginPage.TypePhone(Phone);
         loginPage.TypePassword(Password);
         loginPage.ClickOnTheLoginButton();
+
     }
 
     @Test
@@ -84,6 +87,10 @@ public class DashboardPagePositiveScenarios {
         WebElement HederOfPage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[contains(@class,'category-header-cmp-title')]")));
         Assert.assertEquals(HederOfPage.getText(),"Offensive Words");
 
+    }
+    @After
+    public void Close(){
+        webDriver.quit();
     }
 
 
